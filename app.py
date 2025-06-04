@@ -29,3 +29,10 @@ def appointment():
 
 if __name__ == '__main__':
     app.run()
+
+
+import os
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 10000))  # 10000 is a fallback for local dev
+    app.run(host='0.0.0.0', port=port)
